@@ -7,7 +7,7 @@
  * @returns {string} - The formatted string.
  */
 function capitalizeWords(input) {
-    return input.replace(/\b\w/g, char => char.toUpperCase());
+    return input.replace(/\b\w|_\w|-\w/g, char => char.toUpperCase());
 }
 
 /**
@@ -31,3 +31,8 @@ function logAction(action, username) {
 }
 
 module.exports = { capitalizeWords, filterActiveUsers, logAction };
+
+
+
+
+
